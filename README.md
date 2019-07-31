@@ -20,7 +20,7 @@ import "github.com/biwse/biwse-go"
 token := "<api_token>"
 config := biwse.NewConfiguration()
 ctx := context.WithValue(context.Background(), biwse.ContextAccessToken, token)
-client := NewAPIClient(config)
+client := biwse.NewAPIClient(config)
 //Call any API endpoint
 balance, response, err := client.AppApi.GetBalance(ctx, "<app_id>", "btc")
 ```
